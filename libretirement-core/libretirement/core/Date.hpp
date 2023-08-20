@@ -11,11 +11,13 @@ namespace retirement::core
 	class Date
 	{
 	public:
-		Date(unsigned day, unsigned month, unsigned year);
+		Date(unsigned year, unsigned month, unsigned day);
 
 		constexpr auto getDay() const { return day; }
 		constexpr auto getMonth() const { return month; }
 		constexpr auto getYear() const { return year; }
+
+		bool operator==(const Date&) const;
 
 	private:
 		unsigned day, month, year;
