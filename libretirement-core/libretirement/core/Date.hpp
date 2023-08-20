@@ -17,7 +17,18 @@ namespace retirement::core
 		constexpr auto getMonth() const { return month; }
 		constexpr auto getYear() const { return year; }
 
+		void addDay();
+		void addMonth();
+		void addYear();
+
 		bool operator==(const Date&) const;
+		bool operator>(const Date&) const;
+
+	protected:
+		void processEndOfShorterMonth(); 
+		void processEndOfFebruary();
+        void processEndOfStandardMonth();
+		bool isLeapYear() const;
 
 	private:
 		unsigned day, month, year;
