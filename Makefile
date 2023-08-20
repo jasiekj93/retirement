@@ -4,7 +4,7 @@
 # ------------------------------------------------
 
 # platform
-export PLATFORM := ArmM7
+export PLATFORM := Pc32
 
 # project
 export project_name := retirement
@@ -28,6 +28,7 @@ core \
 
 # Project subprograms
 program_names = \
+retirement \
 
 # Project libraries
 library_names = \
